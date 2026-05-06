@@ -1,0 +1,17 @@
+{
+  "repo": "radian-sim-infection-stack",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 2,
+    "ship": 189,
+    "watch": 129
+  },
+  "terms": [
+    "input pressure",
+    "state drift",
+    "review cost",
+    "decision risk"
+  ]
+}
