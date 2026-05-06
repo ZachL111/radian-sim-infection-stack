@@ -1,0 +1,73 @@
+{
+  "repo": "radian-sim-infection-stack",
+  "language": "C#",
+  "category": "Simulations",
+  "goal": "Create a C# reference implementation for infection workflows, centered on incremental indexing, append-only fixtures, and checkpoint recovery checks.",
+  "review_model": {
+    "terms": [
+      "input pressure",
+      "state drift",
+      "review cost",
+      "decision risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "input pressure",
+      "signal": 70,
+      "slack": 21,
+      "drag": 22,
+      "confidence": 77,
+      "score": 172,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "state drift",
+      "signal": 46,
+      "slack": 46,
+      "drag": 23,
+      "confidence": 65,
+      "score": 134,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 51,
+      "slack": 41,
+      "drag": 25,
+      "confidence": 87,
+      "score": 155,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "decision risk",
+      "signal": 75,
+      "slack": 41,
+      "drag": 14,
+      "confidence": 93,
+      "score": 242,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "input pressure",
+      "signal": 70,
+      "slack": 23,
+      "drag": 9,
+      "confidence": 57,
+      "score": 193,
+      "lane": "ship"
+    }
+  ]
+}
